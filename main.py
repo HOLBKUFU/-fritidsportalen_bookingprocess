@@ -35,8 +35,6 @@ caller_guid = os.getenv('caller_guid')
 cron_name = "KUFU_angpr_fritidsportalen"
 os.environ['WDM_SSL_VERIFY'] = '0'
 
-
-
 def process_dataframe(df, cookies, func, batch_size=50):
     updated_rows = []
     total_rows = len(df)
@@ -51,8 +49,6 @@ def process_dataframe(df, cookies, func, batch_size=50):
                     print(f"Error processing row: {e}")
     updated_df = pd.DataFrame(updated_rows)
     return updated_df
-
-
 
 def bookingLogin(driver=None):
     creds = getcreds(13, 153, caller_guid)
