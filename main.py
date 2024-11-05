@@ -32,7 +32,7 @@ from cron_monitor import cron_monitor
 from dotenv import load_dotenv
 load_dotenv()
 caller_guid = os.getenv('caller_guid')
-cron_name = "KUFU_angpr_fritidsportalen"
+cron_name = "KUFU_angpr_fritidsportalen_process"
 os.environ['WDM_SSL_VERIFY'] = '0'
 
 def process_dataframe(df, cookies, func, batch_size=50):
